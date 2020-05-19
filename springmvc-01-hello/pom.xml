@@ -7,9 +7,7 @@
     <artifactId>et1911</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.etoak.et1911</groupId>
   <artifactId>springmvc-01-hello</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>springmvc-01-hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -20,6 +18,18 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    
   </dependencies>
   <build>
     <finalName>springmvc-01-hello</finalName>

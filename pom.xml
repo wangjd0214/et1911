@@ -10,29 +10,31 @@
     <module>springmvc-01-hello</module>
   </modules>
   
-  <dependencies>
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-context</artifactId>
-  		<version>5.2.2.RELEASE</version>
-  	</dependency>
- 
-  <!-- Servlet-api -->
-  	<dependency>
-  		<groupId>javax.servlet</groupId>
-  		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.1.0</version>
-  	</dependency>
+  <!-- 管理maven依赖,但不引入依赖,由子工程 -->
+  <dependencyManagement>
+	  	<dependencies>
+		  	<dependency>
+		  		<groupId>org.springframework</groupId>
+		  		<artifactId>spring-context</artifactId>
+		  		<version>5.2.2.RELEASE</version>
+		  	</dependency>
+		 
+		  <!-- Servlet-api -->
+		  	<dependency>
+		  		<groupId>javax.servlet</groupId>
+		  		<artifactId>javax.servlet-api</artifactId>
+		  		<version>3.1.0</version>
+		  	</dependency>
+		  
+		  <!-- spring-webmvc -->
+		  	<dependency>
+		  		<groupId>org.springframework</groupId>
+		  		<artifactId>spring-webmvc</artifactId>
+		  		<version>5.2.2.RELEASE</version>
+		  	</dependency>
+	  </dependencies>
   
-  <!-- spring-webmvc -->
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-webmvc</artifactId>
-  		<version>5.2.2.RELEASE</version>
-  	</dependency>
-  	
-  </dependencies>
-  
+  </dependencyManagement>
 </project>
 
 
