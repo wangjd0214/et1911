@@ -13,7 +13,9 @@
 	
 	<!-- 注解扫描器 -->
 	<context:component-scan base-package="com">
+		<!-- 限制扫描的 -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
 	</context:component-scan>
 	
 	<!-- 开启spring mvc 配置 -->
@@ -22,7 +24,7 @@
 	<!-- 将静态资源交给servlet容器 -->
 	<mvc:default-servlet-handler/>
 	<!-- 定制静态资源位置和访问路径 -->
-	<mvc:resources location="classpath:/static/" mapping="/static/**" />
+	<mvc:resources location="classpath:/static/" mapping="/s/**" />
 	<!-- 本地文件访问 -->
 	<mvc:resources location="file:D:\易途JAVA培训\第二阶段\前端文件\CssDayOfficial\image\" mapping="/pic/**" />
 	
