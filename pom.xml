@@ -13,6 +13,7 @@
 		<module>springmvc-02</module>
 		<module>springmvc-03</module>
 		<module>springmvc-04-param</module>
+		<module>springmvc-05-car</module>
 	</modules>
 
 	<!-- 管理maven依赖,但不引入依赖,由子工程 -->
@@ -51,6 +52,18 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>2.9.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.thymeleaf</groupId>
+				<artifactId>thymeleaf</artifactId>
+				<version>3.0.11.RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.thymeleaf</groupId>
+				<artifactId>thymeleaf-spring5</artifactId>
+				<version>3.0.11.RELEASE</version>
 			</dependency>
 		</dependencies>
 
