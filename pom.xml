@@ -19,6 +19,14 @@
 	<!-- 管理maven依赖,但不引入依赖,由子工程 -->
 	<dependencyManagement>
 		<dependencies>
+			<!-- commons-fileUpload文件上传 -->
+			<dependency>
+				<groupId>commons-fileUpload</groupId>
+				<artifactId>commons-fileUpload</artifactId>
+				<version>1.3.3</version>
+			</dependency>
+		
+		
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
@@ -36,6 +44,16 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
+				<version>5.2.2.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>5.2.2.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
 				<version>5.2.2.RELEASE</version>
 			</dependency>
 
@@ -64,6 +82,47 @@
 				<groupId>org.thymeleaf</groupId>
 				<artifactId>thymeleaf-spring5</artifactId>
 				<version>3.0.11.RELEASE</version>
+			</dependency>
+			<!-- Mybatis -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>3.5.3</version>
+			</dependency>
+
+			<!-- mybatis -spring -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>2.0.1</version>
+			</dependency>
+
+			<!-- mysql -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.46</version>
+			</dependency>
+
+			<!-- 阿帕奇的数据源 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>1.1.10</version>
+			</dependency>
+
+			<!-- 分页插件 -->
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>5.1.10</version>
+			</dependency>
+			
+			<!-- logback日志 -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>1.2.3</version>
 			</dependency>
 		</dependencies>
 
