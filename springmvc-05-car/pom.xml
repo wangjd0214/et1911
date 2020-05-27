@@ -14,6 +14,11 @@
 	<name>springmvc-05-car Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+			</dependency>
+	
 		<dependency>
 			<groupId>commons-fileUpload</groupId>
 			<artifactId>commons-fileUpload</artifactId>
@@ -93,6 +98,12 @@
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
 		</dependency>
+		
+		<!-- hibernate-validator 后端校验 -->
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+			</dependency>
 	</dependencies>
 	<build>
 		<finalName>springmvc-05-car</finalName>

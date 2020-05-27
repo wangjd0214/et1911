@@ -19,6 +19,12 @@
 	<!-- 管理maven依赖,但不引入依赖,由子工程 -->
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.13</version>
+			</dependency>
+			
 			<!-- commons-fileUpload文件上传 -->
 			<dependency>
 				<groupId>commons-fileUpload</groupId>
@@ -123,6 +129,13 @@
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>1.2.3</version>
+			</dependency>
+			
+			<!-- hibernate-validator 后端校验 -->
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>6.1.2.Final</version>
 			</dependency>
 		</dependencies>
 

@@ -15,6 +15,7 @@
 	<context:component-scan base-package="com.etoak">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 	<!-- 排除注解 -->
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
@@ -29,8 +30,8 @@
 	
 	<!-- 将静态资源交给servlet容器 -->
 	<mvc:default-servlet-handler/>
-	<!-- 定义图片访问方式 -->
-	<mvc:resources location="file:d:/Test file upload" mapping="/pic/**"></mvc:resources>
+	<!-- 配置的图片访问路径 -->
+	<mvc:resources location="file:d:/Test file upload/" mapping="/pic/**"></mvc:resources>
 
 	<!-- 整合Thymeleaf -->
 	<bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
@@ -55,6 +56,26 @@
 		<!-- value的值是上传文件的最大值  -->
 		<property name="maxUploadSize" value="2097152000"></property>
 	</bean>
+	
+	
+	<mvc:view-controller path="/" view-name="index" />
+	<mvc:view-controller path="/user/toLogin" view-name="login" />
+	
+	
+	
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+		<!-- 被拦截的 -->
+			<mvc:mapping path="/**"/>
+			<!-- 不被拦截的 -->
+			<mvc:exclude-mapping path="/static/**"/>
+			<mvc:exclude-mapping path="/code"/>
+			<mvc:exclude-mapping path="/user/toLogin"/>
+			<mvc:exclude-mapping path="/user/login"/>
+			<bean class="com.etoak.interceptor.Logininterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
 
 
